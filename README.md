@@ -73,7 +73,6 @@ bao gồm các khái niệm: Events, Http, Buffer, Stream, Async, Promise.
     ├── README.md
     └── server.js
 
-    ```
         - node_modules/: Thư mục chứa các module và package mà project sử dụng, được cài đặt thông qua npm.
         - public/: Thư mục chứa các tài nguyên tĩnh, như các file CSS, JavaScript và hình ảnh, được sử dụng bởi trang web.
         - src/: Thư mục chứa mã nguồn của ứng dụng. Thường bao gồm các thư mục config/ để cấu hình ứng dụng, controllers/ để xử lý các yêu cầu HTTP, models/ để định nghĩa các đối tượng trong ứng dụng, routes/ để định nghĩa các đường dẫn URL và chuyển hướng đến các controller tương ứng và views/ để chứa các file view của ứng dụng.
