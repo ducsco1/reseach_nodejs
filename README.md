@@ -55,24 +55,26 @@ bao gồm các khái niệm: Events, Http, Buffer, Stream, Async, Promise.
     + Webpack là một trình biên dịch và gói hợp nội dung cho JavaScript và các tài nguyên web khác, như HTML, CSS, hình ảnh và font. Nó hoạt động bằng cách đọc các tệp trong dự án và tạo ra một hoặc nhiều tệp đầu ra, tất cả các tệp đầu ra đó là các tệp đã được biên dịch và gói hợp nội dung.
 - Tìm hiểu cấu trúc thư mục của Nodejs project.
     + Cấu trúc thư mục của một Node.js project không được yêu cầu theo bất kỳ chuẩn nào. Tuy nhiên, để dễ quản lý và hiểu quả hơn, một số dự án sử dụng các cấu trúc thư mục chuẩn sau đây:
-    ```
-    ├── node_modules/
-    ├── public/
-    │   ├── css/
-    │   ├── img/
-    │   └── js/
-    ├── src/
-    │   ├── config/
-    │   ├── controllers/
-    │   ├── models/
-    │   ├── routes/
-    │   └── views/
-    ├── tests/
-    ├── .gitignore
-    ├── package.json
-    ├── README.md
-    └── server.js
+        ```
+        ├── node_modules/
+        ├── public/
+        │   ├── css/
+        │   ├── img/
+        │   └── js/
+        ├── src/
+        │   ├── config/
+        │   ├── controllers/
+        │   ├── models/
+        │   ├── routes/
+        │   └── views/
+        ├── tests/
+        ├── .gitignore
+        ├── package.json
+        ├── README.md
+        └── server.js
 
+        ```
+        
         - node_modules/: Thư mục chứa các module và package mà project sử dụng, được cài đặt thông qua npm.
         - public/: Thư mục chứa các tài nguyên tĩnh, như các file CSS, JavaScript và hình ảnh, được sử dụng bởi trang web.
         - src/: Thư mục chứa mã nguồn của ứng dụng. Thường bao gồm các thư mục config/ để cấu hình ứng dụng, controllers/ để xử lý các yêu cầu HTTP, models/ để định nghĩa các đối tượng trong ứng dụng, routes/ để định nghĩa các đường dẫn URL và chuyển hướng đến các controller tương ứng và views/ để chứa các file view của ứng dụng.
