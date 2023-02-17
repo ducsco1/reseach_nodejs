@@ -44,10 +44,44 @@ bao gồm các khái niệm: Events, Http, Buffer, Stream, Async, Promise.
         - là một chuỗi dữ liệu đi từ điểm này đến điểm khác.
         - có 4 loại stream: readable stream, writeable stream, duplex stream, transform stream
     + Buffer 
-        - là một nơi chứa dữ liệu tạm thời đang được di chuyển từ điểm này tới điểm khác với kích thược xác định và giới hạn. Chia nhỏ dữ liệu rồi đẩy qua stream để xử lý.
+        - là một đối tượng được sử dụng để lưu trữ dữ liệu nhị phân. Nó cho phép làm việc với các chuỗi byte và dữ liệu nhị phân trong các quá trình xử lý dữ liệu của bạn. Một buffer trong Node.js có thể được khởi tạo từ một chuỗi, một mảng hoặc một buffer khác, và nó cung cấp các phương thức để thao tác với dữ liệu bên trong.
+    + Http
+        - là một giao thức truyền tải dữ liệu giữa máy khách và máy chủ trên mạng. Trong Node.js, module `http` được sử dụng để tạo một máy chủ HTTP, và không giới hạn chỉ dành riêng cho trình duyệt. Bằng cách sử dụng module `http` này cho phép ta xử lý các yêu cầu và phản hồi HTTP một cách dễ dàng và linh hoạt trong Node.js.
+    + Events
+        - là một cơ chế xử lý sự kiện trong Node.js, giúp cho việc lập trình trở nên dễ dàng hơn bằng cách kích hoạt các hàm xử lý sự kiện khi các sự kiện được phát sinh.
+        - module events được sử dụng để tạo ra các đối tượng sự kiện. Đối tượng sự kiện này sẽ có các phương thức để đăng ký (thêm) các hàm xử lý sự kiện và phát sinh các sự kiện tương ứng. Khi sự kiện xảy ra, các hàm xử lý đã được đăng ký sẽ được gọi để xử lý sự kiện đó.
+        - Các sự kiện phổ biến trong Node.js bao gồm error, data, end cho stream hoặc request, response cho HTTP server.
 - Tìm hiểu cách thức hoạt động của webpack.
     + Webpack là một trình biên dịch và gói hợp nội dung cho JavaScript và các tài nguyên web khác, như HTML, CSS, hình ảnh và font. Nó hoạt động bằng cách đọc các tệp trong dự án và tạo ra một hoặc nhiều tệp đầu ra, tất cả các tệp đầu ra đó là các tệp đã được biên dịch và gói hợp nội dung.
 - Tìm hiểu cấu trúc thư mục của Nodejs project.
+    + Cấu trúc thư mục của một Node.js project không được yêu cầu theo bất kỳ chuẩn nào. Tuy nhiên, để dễ quản lý và hiểu quả hơn, một số dự án sử dụng các cấu trúc thư mục chuẩn sau đây:
+    ```
+    ├── node_modules/
+    ├── public/
+    │   ├── css/
+    │   ├── img/
+    │   └── js/
+    ├── src/
+    │   ├── config/
+    │   ├── controllers/
+    │   ├── models/
+    │   ├── routes/
+    │   └── views/
+    ├── tests/
+    ├── .gitignore
+    ├── package.json
+    ├── README.md
+    └── server.js
+
+    ```
+        - node_modules/: Thư mục chứa các module và package mà project sử dụng, được cài đặt thông qua npm.
+        - public/: Thư mục chứa các tài nguyên tĩnh, như các file CSS, JavaScript và hình ảnh, được sử dụng bởi trang web.
+        - src/: Thư mục chứa mã nguồn của ứng dụng. Thường bao gồm các thư mục config/ để cấu hình ứng dụng, controllers/ để xử lý các yêu cầu HTTP, models/ để định nghĩa các đối tượng trong ứng dụng, routes/ để định nghĩa các đường dẫn URL và chuyển hướng đến các controller tương ứng và views/ để chứa các file view của ứng dụng.
+        - tests/: Thư mục chứa các test cho ứng dụng.
+        - .gitignore: File chứa danh sách các tệp và thư mục sẽ bị bỏ qua trong quá trình commit và push lên Git.
+        - package.json: File chứa các thông tin cấu hình cho ứng dụng, bao gồm các package yêu cầu, phiên bản ứng dụng, tác giả, phụ thuộc và scripts.
+        - README.md: File chứa các hướng dẫn và thông tin cho người dùng.
+        - server.js: File chứa mã nguồn để khởi tạo và chạy ứng dụng.
 - Tìm hiểu cách thức hoạt động của package.json và node_modules.
     + package.json là một tệp trong một dự án Node.js, nó chứa thông tin về dự án, các thư viện phụ thuộc và các lệnh để quản lý dự án. Nó giúp cho việc quản lý các phụ thuộc và các phiên bản của chúng trở nên dễ dàng hơn.
     + node_modules là thư mục chứa các gói (packages) đã được cài đặt cho dự án hiện tại. Khi bạn sử dụng lệnh npm install để cài đặt một gói, nó sẽ được tải về và lưu trữ trong thư mục node_modules. Khi bạn require một gói, Node.js sẽ tìm kiếm gói đó trong thư mục node_modules trước khi tìm kiếm trong các thư mục khác.
